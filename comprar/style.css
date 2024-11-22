@@ -5,8 +5,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
 }
 
 header {
@@ -102,27 +100,27 @@ nav .DEMA-logo {
     color: #f39c12;
 }
 
-.catalog-section {
+.DEMA-catalog-section {
     text-align: center;
     max-width: 100vw;
-    width: 100vw;
+    width: auto;
     height: 100vh;
 }
 
-.section-title {
+.DEMA-section-title {
     font-size: 2rem;
     color: rgb(0, 0, 0);
     margin-bottom: 30px;
 }
 
-.catalog-container {
+.DEMA-catalog-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.book-card {
+.DEMA-book-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -132,31 +130,32 @@ nav .DEMA-logo {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book-card:hover {
+.DEMA-book-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.book-image {
+.DEMA-book-image {
     width: 100%;
     height: 25vh;
     border-radius: 8px;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
-.book-title {
+.DEMA-book-title {
     font-size: 1rem;
     color: #2b2b2b;
     margin-bottom: 5px;
 }
 
-.book-author, .book-price {
+.DEMA-book-author, .DEMA-book-price {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 10px;
 }
 
-.book-button {
+.DEMA-book-button {
     background-color: #a4c4b5;
     color: #fff;
     border: none;
@@ -167,7 +166,7 @@ nav .DEMA-logo {
     transition: background-color 0.3s ease;
 }
 
-.book-button:hover {
+.DEMA-book-button:hover {
     background-color: #8bb19d;
 }
 
@@ -182,16 +181,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-.contenedor-faq {
+.DEMA-contenedor-faq {
     display: flex;
     justify-content: space-between;
 }
 
-.columna {
+.DEMA-columna {
     width: 45%;
 }
 
-.pregunta {
+.DEMA-pregunta {
     background-color: #fff;
     border: 1px solid #ccc;
     margin: 10px 0;
@@ -206,7 +205,7 @@ h2 {
 
 }
 
-.faq-btn {
+.DEMA-faq-btn {
     width: fit-content;
     background-color: #333;
     color: white;
@@ -217,25 +216,26 @@ h2 {
     cursor: pointer;
 }
 
-.faq-btn:hover {
+.DEMA-faq-btn:hover {
     background-color: #555;
 }
 
-.respuesta {
+.DEMA-respuesta {
     display: none;
     margin-top: 10px;
 }
 
-.respuesta.visible {
+.DEMA-respuesta.visible {
     display: block;
 }
+
 #ajedrez-edades {
     margin: 0 auto;
     height: 100vh;
     width: 90vw;
 }
 
-.contenedor {
+.DEMA-contenedor {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -244,9 +244,8 @@ h2 {
     width: 100%;
 }
 
-.informacion {
+.DEMA-informacion {
     width: 50%;
-    padding-left: 5vw;
     text-align: left;
     height: 50%;
     border-radius: 10px;
@@ -255,20 +254,31 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #00000022;
 }
 
-.imagen {
+.DEMA-informacion p, h2{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.DEMA-informacion button{
+    border-radius: 5px;
+}
+
+.DEMA-imagen {
     display: flex;
     justify-content: center;
     width: 50%;
     height: 50%;
 }
 
-.imagen img {
+.DEMA-imagen img {
     max-width: 70%;
     height: auto;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 button {
@@ -476,7 +486,7 @@ footer {
         color: white;
         cursor: pointer;
         position: absolute;
-        top: 50%;
+        top: 25%;
         right: 10vw;
         transform: translateY(-50%);
         z-index: 999;
@@ -526,5 +536,75 @@ footer {
     .DEMA-left-links li,
     .DEMA-right-links li {
         list-style: none;
+    }
+
+    .DEMA-catalog-section {
+        height: fit-content;
+    }
+
+    .DEMA-contenedor-faq{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .DEMA-columna{
+        width: 100%;
+        justify-content: center;
+    }
+
+    #ajedrez-edades{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .DEMA-contenedor{
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    .DEMA-imagen{
+        width: 100%;
+    }
+
+    footer {
+        height: max-content;
+        padding: 3vh 3vw; 
+    }
+
+    .DEMA-footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .DEMA-footer-section {
+        margin: 2vh 0; 
+        min-width: 100%; 
+    }
+
+    .DEMA-footer-section h3 {
+        font-size: 1.1rem; 
+    }
+
+    .DEMA-footer-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .DEMA-footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .DEMA-footer-icons a {
+        margin-right: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .DEMA-footer-icons i {
+        font-size: 1.4rem;
     }
 }

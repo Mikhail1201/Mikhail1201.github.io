@@ -1,3 +1,15 @@
+document.getElementById('hamburger-menu').addEventListener('click', () => {
+    const navMenu = document.querySelector('nav');
+
+    if (navMenu.classList.contains('DEMA-active')) {
+        navMenu.classList.remove('DEMA-active');
+        navMenu.classList.add('DEMA-close'); 
+    } else {
+        navMenu.classList.remove('DEMA-close'); 
+        navMenu.classList.add('DEMA-active'); 
+    }
+});
+
 const searchInput = document.getElementById('searchInput');
 const suggestions = document.getElementById('suggestions');
 

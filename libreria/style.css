@@ -109,7 +109,7 @@ body {
 }
 
 
-.search-container {
+.DEMA-search-container {
     text-align: center;
     width: 100vw;
     height: 100vh;
@@ -120,14 +120,14 @@ body {
 
 }
 
-.title {
+.DEMA-title {
     font-size: 2rem;
     color: #ffffff;
     margin-bottom: 20px;
     width: 70%;
 }
 
-.search-box {
+.DEMA-search-box {
     position: relative;
     width: 70%;
     margin: 0 auto;
@@ -149,7 +149,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.suggestions-list {
+.DEMA-suggestions-list {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
@@ -165,18 +165,18 @@ body {
     display: none;
 }
 
-.suggestions-list li {
+.DEMA-suggestions-list li {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.suggestions-list li:hover {
+.DEMA-suggestions-list li:hover {
     background-color: #a4c4b5;
     color: #fff;
 }
 
-.news-section {
+.DEMA-news-section {
     padding: 0;
 
     text-align: center;
@@ -185,20 +185,20 @@ body {
 
 }
 
-.section-title {
+.DEMA-section-title {
     font-size: 2rem;
     color: rgb(255, 255, 255);
     margin-bottom: 30px;
 }
 
-.news-container {
+.DEMA-news-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.news-card {
+.DEMA-news-card {
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -208,34 +208,34 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-card:hover {
+.DEMA-news-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.news-image {
+.DEMA-news-image {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
-.news-content {
+.DEMA-news-content {
     padding: 15px;
 }
 
-.news-title {
+.DEMA-news-title {
     font-size: 1.25rem;
     color: black;
     margin-bottom: 10px;
 }
 
-.news-description {
+.DEMA-news-description {
     font-size: 0.9rem;
     color: #111111;
     margin-bottom: 15px;
 }
 
-.news-button {
+.DEMA-news-button {
     background-color: #a4c4b5;
     color: #fff;
     border: none;
@@ -246,30 +246,30 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.news-button:hover {
+.DEMA-news-button:hover {
     background-color: #8bb19d;
 }
 
-.catalog-section {
+.DEMA-catalog-section {
     padding: 40px 20px;
 
     text-align: center;
 }
 
-.section-title {
+.DEMA-section-title {
     font-size: 2rem;
     color: rgb(255, 255, 255);
     margin-bottom: 30px;
 }
 
-.catalog-container {
+.DEMA-catalog-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.book-card {
+.DEMA-book-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -279,32 +279,32 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book-card:hover {
+.DEMA-book-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.book-image {
+.DEMA-book-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.book-title {
+.DEMA-book-title {
     font-size: 1rem;
     color: #2b2b2b;
     margin-bottom: 5px;
 }
 
-.book-author,
-.book-price {
+.DEMA-book-author,
+.DEMA-book-price {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 10px;
 }
 
-.book-button {
+.DEMA-book-button {
     background-color: #a4c4b5;
     color: #fff;
     border: none;
@@ -315,11 +315,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.book-button:hover {
+.DEMA-book-button:hover {
     background-color: #8bb19d;
 }
 
 footer {
+
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -466,12 +467,6 @@ footer {
 
     body {
         font-size: 14px;
-        padding: 10px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 15px;
     }
 
     .header {
@@ -491,6 +486,47 @@ footer {
     img {
         max-width: 100%;
         height: auto;
+    }
+    
+    .DEMA-news-section{
+        height: fit-content;
+    }
+
+    footer {
+        height: max-content;
+        padding: 3vh 3vw; 
+    }
+
+    .DEMA-footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .DEMA-footer-section {
+        margin: 2vh 0; 
+        min-width: 100%; 
+    }
+
+    .DEMA-footer-section h3 {
+        font-size: 1.1rem; 
+    }
+
+    .DEMA-footer-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .DEMA-footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .DEMA-footer-icons a {
+        margin-right: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .DEMA-footer-icons i {
+        font-size: 1.4rem;
     }
 }
 
@@ -586,34 +622,5 @@ footer {
     .DEMA-left-links li,
     .DEMA-right-links li {
         list-style: none;
-    }
-}
-
-@media (min-width: 1025px) {
-    body {
-        font-size: 18px;
-    }
-
-    .container {
-        width: 75%;
-        margin: 0 auto;
-    }
-
-    .header {
-        text-align: left;
-    }
-
-    .nav {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .nav a {
-        margin: 0 20px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
     }
 }

@@ -2,6 +2,7 @@ body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 header {
@@ -97,81 +98,106 @@ nav .DEMA-logo {
     color: #f39c12;
 }
 
-.login-section {
+.DEMA-login-section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background: linear-gradient(to right, #a4c4b5, #8bb19d);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
 }
 
-.login-container {
-    background-color: #ffffff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 350px;
+.DEMA-login-container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
     text-align: center;
+    margin-top: 10vh;
 }
 
-.login-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.DEMA-login-title {
+    font-size: 2rem;
     color: #4a4a4a;
+    margin-bottom: 20px;
 }
 
-.login-form label {
-    display: block;
-    text-align: left;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.login-form input {
+.DEMA-login-form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.login-form input:focus {
-    border-color: #a4c4b5;
-    outline: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.DEMA-login-form input:focus {
+    border-color: #8bb19d;
+    box-shadow: 0 0 10px rgba(139, 177, 157, 0.5);
 }
 
-.login-button {
-    background-color: #a4c4b5;
-    color: #ffffff;
+.DEMA-login-button {
+    background: linear-gradient(to right, #8bb19d, #6f9c84);
+    color: #fff;
     border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
-.login-button:hover {
-    background-color: #8bb19d;
+.DEMA-login-button:hover {
+    background: linear-gradient(to right, #6f9c84, #8bb19d);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.login-footer {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #666;
+.DEMA-login-footer{
+    color: #333 ;
 }
 
-.login-footer a {
-    color: #a4c4b5;
-    text-decoration: none;
+.DEMA-login-footer a {
+    color: #8bb19d;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.login-footer a:hover {
+.DEMA-login-footer a:hover {
     text-decoration: underline;
+}
+
+.DEMA-register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.DEMA-register-form input:focus {
+    border-color: #8bb19d;
+    box-shadow: 0 0 10px rgba(139, 177, 157, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+.DEMA-form-wrapper {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.DEMA-form-wrapper.hidden {
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 footer {
@@ -318,6 +344,47 @@ footer {
     .DEMA-right-links li {
         list-style: none;
     }
+
+    .DEMA-login-container{
+        margin: 0 5vw;
+    }
+
+    footer {
+        height: max-content;
+        padding: 3vh 3vw; 
+    }
+
+    .DEMA-footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .DEMA-footer-section {
+        margin: 2vh 0; 
+        min-width: 100%; 
+    }
+
+    .DEMA-footer-section h3 {
+        font-size: 1.1rem; 
+    }
+
+    .DEMA-footer-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .DEMA-footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .DEMA-footer-icons a {
+        margin-right: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .DEMA-footer-icons i {
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -413,4 +480,5 @@ footer {
     .DEMA-right-links li {
         list-style: none;
     }
+
 }

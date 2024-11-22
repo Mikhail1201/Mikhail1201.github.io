@@ -25,42 +25,51 @@ setInterval(() => {
     moveSlide(1);
 }, 5000);
  
-let currentSlide2 = 0;
-function moveSlide2(step) {
-    const slides = document.querySelectorAll(".DEMA-carousel-item-2");
-    const carouselContainer = document.querySelector(".DEMA-carousel-container-2");
 
-    const totalSlides = slides.length;
-    const containerWidth = carouselContainer.offsetWidth;
-    const slideWidth = slides[0].offsetWidth + parseFloat(getComputedStyle(carouselContainer).gap);
+let currentIndex = 0;
 
-    currentSlide2 = (currentSlide2 + step + totalSlides) % totalSlides;
+const items = document.querySelectorAll('.DEMA-carousel-item-2');
+const prevBtn = document.querySelector('.DEMA-prev-btn-2');
+const nextBtn = document.querySelector('.DEMA-next-btn-2');
 
-    const offset = -(currentSlide2 * slideWidth - (containerWidth - slideWidth) / 4);
-    carouselContainer.style.transform = `translateX(${offset}px)`;
 
-    slides.forEach((slide, index) => {
-        if (index === currentSlide2) {
-            slide.classList.add("DEMA-active");
-        } else {
-            slide.classList.remove("DEMA-active");
+function updateCarousel(direction) {
+    items.forEach((item, index) => {
+        item.classList.remove('active', 'prev', 'next'); 
+
+        if (index === currentIndex) {
+            item.classList.add('active'); 
+        } 
+
+        else if (
+            direction === 'next' &&
+            index === (currentIndex - 1 + items.length) % items.length
+        ) {
+            item.classList.add('prev');
+        } 
+
+        else if (
+            direction === 'prev' &&
+            index === (currentIndex + 1) % items.length
+        ) {
+            item.classList.add('next');
         }
     });
 }
 
-window.addEventListener("resize", () => moveSlide2(0));
-document.addEventListener("DOMContentLoaded", () => moveSlide2(0));
-
-
-document.querySelectorAll('.DEMA-info-btn-2').forEach(button => {
-    button.addEventListener('click', function() {
-      const teamInfo = this.closest('.DEMA-carousel-item-2').querySelector('.DEMA-team-info-2');
-      
-    if (teamInfo.classList.contains('DEMA-active')) {
-        teamInfo.classList.remove('DEMA-active'); 
-        teamInfo.classList.add('DEMA-close'); 
-    } else {
-        teamInfo.classList.remove('DEMA-close');
-        teamInfo.classList.add('DEMA-active');
-    }});
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length; 
+    updateCarousel('prev'); 
 });
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length; 
+    updateCarousel('next');
+});
+
+updateCarousel();
+
+function toggleInfo(id) {
+    const info = document.getElementById(id);
+    info.classList.toggle('open');
+}

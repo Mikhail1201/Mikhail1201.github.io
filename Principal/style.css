@@ -202,9 +202,48 @@ main section button{
 
 .DEMA-carousel-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
+}
+
+.DEMA-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.DEMA-text-overlay h2 {
+    background-color: #000000cc;
+    box-shadow: 2px 2px 5px #000000;
+    border-radius: 8px;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.DEMA-text-overlay h3 {
+    background-color: #000000cc;
+    box-shadow: 2px 2px 5px #000000;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    position: relative;
+    top: 10px;
+    transform: translate(150%); 
+}
+
+.DEMA-image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000088;
 }
 
 .DEMA-prev,
@@ -305,7 +344,7 @@ main section button{
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: #f0f0f0;
-
+    cursor: pointer;
 }
 
 .DEMA-blog article img {
@@ -438,149 +477,116 @@ main section button{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#meet-our-team {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
+.DEMA-carousel-section-2{
     display: flex;
     flex-direction: column;
-}
-
-.DEMA-carousel-section-2 {
-    position: relative;
-    padding-top: 10vh;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.DEMA-carousel-2 {
-    background-color: #666;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #eaf2f8;
 }
 
 .DEMA-carousel-container-2 {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.DEMA-carousel-2 {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 5vw;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
     position: relative;
+    height: 70vh;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .DEMA-carousel-item-2 {
-    width: calc(100% - 80vw);
-    max-width: 20rem;
-    margin: 0 auto;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 40vw ;
+    height: 70vh;
+    display: block;
     text-align: center;
-    background-color: #ffffff;
-    padding: 2rem;
+    position: absolute;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
     transform: translateX(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    flex: 0 0 auto;
-    position: relative;
 }
 
+.DEMA-carousel-item-2.active {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+.DEMA-carousel-item-2.prev {
+    transform: translateX(-100%);
+}
+
+.DEMA-carousel-item-2.next {
+    transform: translateX(100%); 
+}
 .DEMA-carousel-item-2 img {
-    width: 100%;
-    margin-bottom: 1rem;
+    border-radius: 50%;
+    margin-top: 10px;
+    max-width: 100%;
+    width: 20vw;
+    height: 40vh;
+    object-fit: cover;
 }
 
-.DEMA-carousel-item-2 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.DEMA-team-info-2 {
-    display: none;
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #666;
-}
-
-.DEMA-carousel-item-2.DEMA-active {
-    transform: translateY(-1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-.DEMA-carousel-item-2 button {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.DEMA-carousel-item-2 button:hover {
-    background-color: #0056b3;
-}
-
-.DEMA-carousel-controls-2 {
-    width: 60vw;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: end;
-    gap: 1rem;
-}
-
-.DEMA-carousel-controls-2 button {
-    font-size: 2rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 20%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.DEMA-carousel-controls-2 button:hover {
-    background-color: #0056b3;
-}
-
-.DEMA-team-info-2 {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: -15vw;
-    width: 70%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 1.25rem;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease-in-out;
-    z-index: 10;
-}
-
-.DEMA-team-info-2.DEMA-active {
-    display: block;
-    transform: scaleY(1);
-}
-
-.DEMA-team-info-2 .DEMA-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: 1px solid white;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
+.DEMA-social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
     font-size: 14px;
+    color: #555;
 }
 
+.DEMA-info-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.DEMA-extra-info {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.DEMA-extra-info.open {
+    display: block;
+}
+
+.DEMA-prev-btn-2,
+.DEMA-next-btn-2 {
+    position: absolute;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.DEMA-prev-btn-2 {
+    left: -10vw;
+}
+
+.DEMA-next-btn-2 {
+    right: -10vw;
+}
 
 footer {
     height: 50vh;
@@ -757,6 +763,13 @@ footer {
         padding-top: 0;
     }
 
+    .DEMA-carousel-section{
+        height: fit-content;
+    }
+    .DEMA-carousel-container{
+        height: fit-content;
+    }
+
     .DEMA-blog-grid {
         display: flex;
         grid-template-columns: repeat(2, 1fr);
@@ -766,13 +779,12 @@ footer {
         flex: 1 1 calc(50% - 20px);
     }
 
-    .DEMA-carousel-container-2 {
-        gap: 3vw;
+    .DEMA-next-btn-2{
+        right: 1vw;
     }
 
-    .DEMA-carousel-item-2 {
-        width: 8%;
-        max-width: 10rem;
+    .DEMA-prev-btn-2{
+        left: 1vw;
     }
 }
 
@@ -851,9 +863,55 @@ footer {
         list-style: none;
     }
 
+
+    .DEMA-learn{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .DEMA-text-learn{
+        padding-top: 10vh;
+    }
+
+    .DEMA-text-learn p{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+    .DEMA-image-learn{
+        padding-left: 10%;
+    }
+
+    .DEMA-carousel-section{
+        height: fit-content;
+    }
+    .DEMA-carousel-container{
+        height: fit-content;
+    }
+
+    .DEMA-text-overlay h2 {
+        font-size: small;       
+        transform: translate(0);  
+    }
+    
+    .DEMA-text-overlay h3 {
+        font-size: smaller;
+        transform: translate(35%); 
+    }
+
     .DEMA-promo {
         flex-direction: column;
         text-align: center;
+    }
+
+    .DEMA-promo-image{
+        width: 100%;
     }
 
     .DEMA-promo-content {
@@ -865,6 +923,9 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .DEMA-services{
+        height: fit-content;
+    }
     .DEMA-service-card {
         flex: 1 1 100%;
     }
@@ -876,14 +937,59 @@ footer {
         border-radius: 8px;
     }
 
-    .DEMA-carousel-container-2 {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+    .DEMA-dudas-container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
     }
 
-    .DEMA-carousel-item-2 {
-        width: 4%;
-        max-width: 10rem;
-        text-align: start;
+    .DEMA-carousel-item-2 img{
+        width: 40vw;
+        height: 20vh;
+    }
+
+    .DEMA-prev-btn-2 {
+        left: 10vw;
+    }
+    
+    .DEMA-next-btn-2 {
+        right: 10vw;
+    }
+
+    footer {
+        height: max-content;
+        padding: 3vh 3vw; 
+    }
+
+    .DEMA-footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .DEMA-footer-section {
+        margin: 2vh 0; 
+        min-width: 100%; 
+    }
+
+    .DEMA-footer-section h3 {
+        font-size: 1.1rem; 
+    }
+
+    .DEMA-footer-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .DEMA-footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .DEMA-footer-icons a {
+        margin-right: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .DEMA-footer-icons i {
+        font-size: 1.4rem;
     }
 }
