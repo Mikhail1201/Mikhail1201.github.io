@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Libros de Ajedrez</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
     <section class="DEMA-news-section" id="DEMA-news">
         <h2 class="DEMA-section-title">Noticias Recientes del Mundo del Ajedrez</h2>
         <div class="DEMA-news-container">
-            <article class="DEMA-news-card">
+            <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="DEMA-news-card">
                 <img src="../Images/india.png" alt="Olimpiada de Ajedrez 2024" class="DEMA-news-image">
                 <div class="DEMA-news-content">
                     <h3 class="DEMA-news-title">India hace historia en la Olimpiada de Ajedrez 2024</h3>
@@ -52,7 +53,7 @@
                     <a href="https://es.chessbase.com" target="_blank" class="DEMA-news-button">Leer más</a>
                 </div>
             </article>
-            <article class="DEMA-news-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="DEMA-news-card">
                 <img src="../Images/campeonato.png" alt="Campeonato del Mundo 2024" class="DEMA-news-image">
                 <div class="DEMA-news-content">
                     <h3 class="DEMA-news-title">Ding Liren vs Gukesh: Campeonato Mundial 2024</h3>
@@ -62,7 +63,7 @@
                     <a href="https://www.chess.com" target="_blank" class="DEMA-news-button">Leer más</a>
                 </div>
             </article>
-            <article class="DEMA-news-card">
+            <article data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600" class="DEMA-news-card">
                 <img src="../Images/100 años.jpg" alt="Historia del Ajedrez" class="DEMA-news-image">
                 <div class="DEMA-news-content">
                     <h3 class="DEMA-news-title">Celebrando 100 años del Ajedrez Moderno</h3>
@@ -77,35 +78,35 @@
     <section class="DEMA-catalog-section">
         <h2 class="DEMA-section-title">Catálogo de Libros</h2>
         <div class="DEMA-catalog-container">
-            <article class="DEMA-book-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="DEMA-book-card">
                 <img src="../Images/Libro1.webp" alt="Estrategias de Ajedrez Moderno" class="DEMA-book-image">
                 <h3 class="DEMA-book-title">Los Secretos de la Estrategia Moderna en Ajedrez</h3>
                 <p class="DEMA-book-author">Autor: John Watson</p>
                 <p class="DEMA-book-price">$19.99</p>
                 <button class="DEMA-book-button">Comprar</button>
             </article>
-            <article class="DEMA-book-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="DEMA-book-card">
                 <img src="../Images/Libro2.webp" alt="Ajedrez para Principiantes" class="DEMA-book-image">
                 <h3 class="DEMA-book-title">Ajedrez para Principiantes</h3>
                 <p class="DEMA-book-author">Autor: Robertie Bill</p>
                 <p class="DEMA-book-price">$14.99</p>
                 <button class="DEMA-book-button">Comprar</button>
             </article>
-            <article class="DEMA-book-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="DEMA-book-card">
                 <img src="../Images/Libro3.webp" alt="El Arte del Final en Ajedrez" class="DEMA-book-image">
                 <h3 class="DEMA-book-title">Los 100 Finales que hay que Saber</h3>
                 <p class="DEMA-book-author">Autor: Jesus De La Villa</p>
                 <p class="DEMA-book-price">$24.99</p>
                 <button class="DEMA-book-button">Comprar</button>
             </article>
-            <article class="DEMA-book-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="DEMA-book-card">
                 <img src="../Images/Libro4.webp" alt="Tácticas Avanzadas de Ajedrez" class="DEMA-book-image">
                 <h3 class="DEMA-book-title">La Tácticas en el Ajedrez</h3>
                 <p class="DEMA-book-author">Autor: Viktor Moskalenko </p>
                 <p class="DEMA-book-price">$29.99</p>
                 <button class="DEMA-book-button">Comprar</button>
             </article>
-            <article class="DEMA-book-card">
+            <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="DEMA-book-card">
                 <img src="../Images/Libro5.gif" alt="Historia del Ajedrez" class="DEMA-book-image">
                 <h3 class="DEMA-book-title">Eso no Estaba en mi Libro de Historia del Ajedrez</h3>
                 <p class="DEMA-book-author">Autor: Gude Fernandez, Ventura Antonio</p>
@@ -149,5 +150,13 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            once: true,
+            duration: 1200
+        });
+    </script>
 </body>
 </html>

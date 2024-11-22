@@ -481,6 +481,7 @@ main section button{
     display: flex;
     flex-direction: column;
     background-color: #eaf2f8;
+    height: max-content;
 }
 
 .DEMA-carousel-container-2 {
@@ -494,7 +495,7 @@ main section button{
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     margin-top: 20px;
 }
@@ -503,7 +504,7 @@ main section button{
     flex: 0 0 100%;
     max-width: 100%;
     width: 40vw ;
-    height: 70vh;
+    height: 90vh;
     display: block;
     text-align: center;
     position: absolute;

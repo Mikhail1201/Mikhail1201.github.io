@@ -118,6 +118,9 @@ nav .DEMA-logo {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .DEMA-book-card {
@@ -125,6 +128,7 @@ nav .DEMA-logo {
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 200px;
+    height: fit-content;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
