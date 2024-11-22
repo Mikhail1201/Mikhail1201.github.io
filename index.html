@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilliant Move</title>
+    <link rel="stylesheet" href="Principal/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="DEMA-logo">
+                <img id="logo" src="Images/logo.png" alt="">
+            </div>
+            <button class="DEMA-hamburger" id="hamburger-menu">☰</button>
+            <div class="DEMA-links-container">
+                <ul class="DEMA-left-links">
+                    <li><a href="index.html">Cursos de Ajedrez</a></li>
+                    <li><a href="libreria/libreria.html">Librería Virtual</a></li>
+                    <li><a href="comprar/comprar.html">Comprar Cursos</a></li>
+                </ul>
+                <ul class="DEMA-right-links">
+                    <li><a href="index.html#promo">Regalar</a></li>
+                    <li><a href="comprar/comprar.html#FAQs">FAQ's</a></li>
+                    <li><a href="login/login.html">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="DEMA-learn">
+            <div class="DEMA-text-learn">
+                <h1>Aprende a jugar <span>Ajedrez</span></h1>
+                <h2>En Brilliant Move</h2>
+                <p>
+                    Tanto si partes de cero como si ya tienes nociones básicas, 
+                    <strong>estamos enseñando Ajedrez con cursos y videos pregrabados que tendrás <em>para siempre</em>.</strong>
+                </p>
+            </div>
+            <div class="DEMA-image-learn">
+                <img src="Images/Tablero.jpeg" alt="ChessBoard">
+            </div>
+        </section>
+        <section class="DEMA-carousel-section">
+            <div class="DEMA-carousel-container">
+                <div class="DEMA-carousel-item">
+                    <img src="https://via.placeholder.com/1920x1080?text=Imagen+1" alt="Imagen 1">
+                </div>
+                <div class="DEMA-carousel-item">
+                    <img src="https://via.placeholder.com/1920x1080?text=Imagen+2" alt="Imagen 2">
+                </div>
+                <div class="DEMA-carousel-item">
+                    <img src="https://via.placeholder.com/1920x1080?text=Imagen+3" alt="Imagen 3">
+                </div>
+            </div>
+            <button class="DEMA-prev" onclick="moveSlide(-1, '.carousel-item', '.carousel-container')">&#10094;</button>
+            <button class="DEMA-next" onclick="moveSlide(1, '.carousel-item', '.carousel-container')">&#10095;</button>
+        </section>
+        <section id="services" class="DEMA-services">
+            <h2>Nuestros cursos</h2>
+            <p>Cursos creados especificamente para principiantes</p>
+            <div class="DEMA-services-grid">
+                <div data-aos="fade-right" data-aos-duration="1000" class="DEMA-service-card DEMA-basic">
+                    <div class="DEMA-icon"></div>
+                    <h3>Ajedrez Básico</h3>
+                    <p>Partimos desde el movimiento de las piezas, los mates mas comunes hasta la táctica</p>
+                    <button>Leer Más</button>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="DEMA-service-card  DEMA-calculation">
+                    <div class="DEMA-icon"></div>
+                    <h3>Cálculo</h3>
+                    <p>Te enseñamos a calcular variantes, lo que la gente llama "Ver el futuro"</p>
+                    <button>Leer Más</button>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="DEMA-service-card DEMA-endings">
+                    <div class="DEMA-icon"></div>
+                    <h3>Finales</h3>
+                    <p>Explicamos con delicadeza y sutileza técnicas de finales, posiciones complejas que debes conocer</p>
+                    <button>Leer Más</button>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="DEMA-blog">
+            <div class="DEMA-blog-container">
+                <h2>Últimas publicaciones</h2>
+                <div class="DEMA-blog-grid">
+                    <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <img src="https://via.placeholder.com/1920x1080?text=article" alt="Artículo 1">
+                        <h3>Título del Blog 1</h3>
+                        <p>Resumen del artículo...</p>
+                    </article>
+                    <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <img src="https://via.placeholder.com/1920x1080?text=article" alt="Artículo 2">
+                        <h3>Título del Blog 2</h3>
+                        <p>Resumen del artículo...</p>
+                    </article>
+                    <article data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <img src="https://via.placeholder.com/1920x1080?text=article" alt="Artículo 3">
+                        <h3>Título del Blog 3</h3>
+                        <p>Resumen del artículo...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="promo" class="DEMA-promo">
+            <div class="DEMA-promo-container">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="DEMA-promo-text">
+                    <h2>¿Quieres regalar un curso de Ajedrez?</h2>
+                    <p>Nuestros cursos son el regalo perfecto para cualquier principiante con ganas de aprender.
+                    </p>
+                    <p>Puedes regalar un curso individual o el combo de los 3 cursos.</p>
+                    <button>Elige tu regalo</button>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" class="DEMA-promo-image">
+                    <img src="Images/gifting.jpg" alt="Regalo">
+                </div>
+            </div>
+        </section>
+        <section id="dudas">
+            <div class="DEMA-dudas-container">
+                <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" class="DEMA-dudas-text">
+                    <h2>¿Tienes dudas sobre el Ajedrez?</h2>
+                    <p>Aquí te dejamos las respuestas a las preguntas más frecuentes que nos llegan a diario.
+                    </p>
+                    <button>Mas Info.</button>
+                </div>
+                <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" class="DEMA-dudas-image">
+                    <img src="Images/doubt.jpeg" alt="Doubt">
+                </div>
+            </div>
+        </section>
+        <section class="DEMA-carousel-section-2" id="meet-our-team">
+            <h2>Conoce a nuestros Maestros</h2>
+            <div class="DEMA-carousel-2">
+                <div class="DEMA-carousel-container-2">
+                    <div class="DEMA-carousel-item-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <img src="https://via.placeholder.com/300" alt="Maestro 1">
+                        <h3>Daniel Padilla</h3>
+                        <button class="DEMA-info-btn-2">Más Info.</button>
+                        <div class="DEMA-team-info-2">
+                            <p><strong>Edad:</strong> 22 años</p>
+                            <p><strong>Especialidad:</strong> Finales</p>
+                            <p><strong>Experiencia:</strong> 15 años practicando el deporte, multiples veces campeón
+                                nacional.</p>
+                            <p><strong>Elo FIDE:</strong> 1883</p>
+                        </div>
+                    </div>
+                    <div class="DEMA-carousel-item-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <img src="https://via.placeholder.com/300" alt="Maestro 2">
+                        <h3>Miguel Alzate</h3>
+                        <button class="DEMA-info-btn-2">Más Info.</button>
+                        <div class="DEMA-team-info-2">
+                            <p><strong>Edad:</strong> 18 años</p>
+                            <p><strong>Especialidad:</strong> Estrategias</p>
+                            <p><strong>Experiencia:</strong> 7 años practicando el deporte.</p>
+                            <p><strong>Elo FIDE:</strong> 1550</p>
+                        </div>
+                    </div>
+                    <div class="DEMA-carousel-item-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <img src="https://via.placeholder.com/300" alt="Maestro 3">
+                        <h3>Owen Florez</h3>
+                        <button class="DEMA-info-btn-2">Más Info.</button>
+                        <div class="DEMA-team-info-2">
+                            <p><strong>Edad:</strong> 20 años</p>
+                            <p><strong>Especialidad:</strong> Ataque y tácticas</p>
+                            <p><strong>Experiencia:</strong> 4 años practicando el deporte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="DEMA-carousel-controls-2">
+                <button class="DEMA-prev-btn-2" onclick="moveSlide2(-1)">&#10094;</button>
+                <button class="DEMA-next-btn-2" onclick="moveSlide2(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <footer class="DEMA-footer">
+        <div class="DEMA-footer-container">
+            <div class="DEMA-footer-section">
+                <h3>Brilliant Move</h3>
+                <p>Estrategia en cada jugada, maestría en cada movimiento.</p>
+                <div class="DEMA-footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="DEMA-footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Cursos de Ajedrez</a></li>
+                    <li><a href="libreria/libreria.html">Librería Virtual</a></li>
+                    <li><a href="comprar/comprar.html">Comprar Cursos</a></li>
+                    <li><a href="index.html#promo">Regalar</a></li>
+                    <li><a href="comprar/comprar.html#FAQs">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="DEMA-footer-section">
+                <h3>Contact Us</h3>
+                <p>¿Tienes preguntas o sugerencias? Contáctanos</p>
+                <p><a href="maalzatea23@ul.edu.co">maalzatea23@ul.edu.co</a></p>
+                <p><a href="maalzatea23@ul.edu.co">depadillao23@ul.edu.co</a></p>
+                <p>¿Necesitas ayuda? Llámanos</p>
+                <p><a href="tel:+573024416935">+57 302 441 6935</a></p>
+                <p><a href="tel:+573024416935">+57 302 847 9315</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="Principal/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            once: true,
+            duration: 1200
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Libros de Ajedrez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="DEMA-logo">
+                <img id="logo" src="../Images/logo.png" alt="">
+            </div>
+            <button class="DEMA-hamburger" id="hamburger-menu">☰</button>
+            <div class="DEMA-links-container">
+                <ul class="DEMA-left-links">
+                    <li><a href="../index.html">Cursos de Ajedrez</a></li>
+                    <li><a href="../libreria/libreria.html">Librería Virtual</a></li>
+                    <li><a href="../comprar/comprar.html">Comprar Cursos</a></li>
+                </ul>
+                <ul class="DEMA-right-links">
+                    <li><a href="../index.html#promo">Regalar</a></li>
+                    <li><a href="../comprar/comprar.html#FAQs">FAQ's</a></li>
+                    <li><a href="../login/login.html">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="search-container">
+        <h1 class="title">Librería Virtual - Libros de Ajedrez</h1>
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Buscar libros de ajedrez..." 
+                autocomplete="off"
+            />
+            <ul class="suggestions-list" id="suggestions"></ul>
+        </div>
+    </div>
+    <section class="news-section">
+        <h2 class="section-title">Noticias Recientes del Mundo del Ajedrez</h2>
+        <div class="news-container">
+            <article class="news-card">
+                <img src="../Images/india.png" alt="Olimpiada de Ajedrez 2024" class="news-image">
+                <div class="news-content">
+                    <h3 class="news-title">India hace historia en la Olimpiada de Ajedrez 2024</h3>
+                    <p class="news-description">
+                        India se corona campeona en las categorías abierta y femenina, consolidándose como una superpotencia del ajedrez. 
+                    </p>
+                    <a href="https://es.chessbase.com" target="_blank" class="news-button">Leer más</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="../Images/campeonato.png" alt="Campeonato del Mundo 2024" class="news-image">
+                <div class="news-content">
+                    <h3 class="news-title">Ding Liren vs Gukesh: Campeonato Mundial 2024</h3>
+                    <p class="news-description">
+                        El enfrentamiento por el título mundial se celebrará en Singapur, con un premio de 2,5 millones de dólares en juego.
+                    </p>
+                    <a href="https://www.chess.com" target="_blank" class="news-button">Leer más</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="../Images/100 años.jpg" alt="Historia del Ajedrez" class="news-image">
+                <div class="news-content">
+                    <h3 class="news-title">Celebrando 100 años del Ajedrez Moderno</h3>
+                    <p class="news-description">
+                        Desde la famosa partida de Paul Morphy hasta el impacto de Bobby Fischer, recordamos los momentos icónicos del ajedrez.
+                    </p>
+                    <a href="https://noticiastvn24.com" target="_blank" class="news-button">Leer más</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="catalog-section">
+        <h2 class="section-title">Catálogo de Libros</h2>
+        <div class="catalog-container">
+            <article class="book-card">
+                <img src="../Images/Libro1.webp" alt="Estrategias de Ajedrez Moderno" class="book-image">
+                <h3 class="book-title">Los Secretos de la Estrategia Moderna en Ajedrez</h3>
+                <p class="book-author">Autor: John Watson</p>
+                <p class="book-price">$19.99</p>
+                <button class="book-button">Comprar</button>
+            </article>
+            <article class="book-card">
+                <img src="../Images/Libro2.webp" alt="Ajedrez para Principiantes" class="book-image">
+                <h3 class="book-title">Ajedrez para Principiantes</h3>
+                <p class="book-author">Autor: Robertie Bill</p>
+                <p class="book-price">$14.99</p>
+                <button class="book-button">Comprar</button>
+            </article>
+            <article class="book-card">
+                <img src="../Images/Libro3.webp" alt="El Arte del Final en Ajedrez" class="book-image">
+                <h3 class="book-title">Los 100 Finales que hay que Saber</h3>
+                <p class="book-author">Autor: Jesus De La Villa</p>
+                <p class="book-price">$24.99</p>
+                <button class="book-button">Comprar</button>
+            </article>
+            <article class="book-card">
+                <img src="../Images/Libro4.webp" alt="Tácticas Avanzadas de Ajedrez" class="book-image">
+                <h3 class="book-title">La Tácticas en el Ajedrez</h3>
+                <p class="book-author">Autor: Viktor Moskalenko </p>
+                <p class="book-price">$29.99</p>
+                <button class="book-button">Comprar</button>
+            </article>
+            <article class="book-card">
+                <img src="../Images/Libro5.gif" alt="Historia del Ajedrez" class="book-image">
+                <h3 class="book-title">Eso no Estaba en mi Libro de Historia del Ajedrez</h3>
+                <p class="book-author">Autor: Gude Fernandez, Ventura Antonio</p>
+                <p class="book-price">$18.99</p>
+                <button class="book-button">Comprar</button>
+            </article>
+        </div>
+    </section>
+    <footer class="DEMA-footer">
+        <div class="DEMA-footer-container">
+            <div class="DEMA-footer-section">
+                <h3>Brilliant Move</h3>
+                <p>Estrategia en cada jugada, maestría en cada movimiento.</p>
+                <div class="DEMA-footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="DEMA-footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Cursos de Ajedrez</a></li>
+                    <li><a href="../libreria/libreria.html">Librería Virtual</a></li>
+                    <li><a href="../comprar/comprar.html">Comprar Cursos</a></li>
+                    <li><a href="../index.html#promo">Regalar</a></li>
+                    <li><a href="../comprar/comprar.html#FAQs">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="DEMA-footer-section">
+                <h3>Contact Us</h3>
+                <p>¿Tienes preguntas o sugerencias? Contáctanos</p>
+                <p><a href="maalzatea23@ul.edu.co">maalzatea23@ul.edu.co</a></p>
+                <p><a href="maalzatea23@ul.edu.co">depadillao23@ul.edu.co</a></p>
+                <p>¿Necesitas ayuda? Llámanos</p>
+                <p><a href="tel:+573024416935">+57 302 441 6935</a></p>
+                <p><a href="tel:+573024416935">+57 302 847 9315</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
